@@ -1,0 +1,107 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Lexend+Deca:wght@400;700&family=Nunito:ital@0;1&family=Open+Sans:wght@400;700;800&family=Outfit:wght@300;400;600&family=Poppins:wght@200&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+:root {
+  --clr-red: #e63946;
+  --clr-yellow:#ffd166;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e63946;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.seat{
+  background-color: gray;
+  height: 1rem;
+  width: 1.5rem;
+  margin: 3px;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+.row{
+  display: flex;
+}
+.moviecontainer select{
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-left: 0.5rem;
+  padding: 5px 15px;
+  appearance: none;
+  text-align: center;
+}
+.seat.selected{
+  background-color:aliceblue;
+}
+.seat.occupied{
+  background-color: #ffd166;
+}
+.seat:nth-of-type(2){
+  margin-right: 18px;
+}
+.seat:nth-last-of-type(2){
+  margin-left: 18px;
+}
+.seat:not(.occupied):hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover{
+  cursor: default;
+  transform: scale(1);
+}
+.showcase{
+  background-color: rgba(0,0,0,0.1);
+  color: grey;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.showcase li{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  margin: 0 10px;
+}
+.showcase li small{
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+ 
+}
+.screen{
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-46deg);
+  box-shadow: 0px 0px 20px aliceblue;
+}
+.container{
+  perspective: 1000px;
+  margin-bottom: 30px
+}
+.text{
+  margin: 5px 0;
+  font-size: 16px;
+}
+.text span{
+  color: white;
+  font-size: 16px;
+  
+}
